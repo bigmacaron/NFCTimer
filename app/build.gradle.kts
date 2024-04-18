@@ -1,20 +1,16 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.get.application)
+    alias(libs.plugins.get.hilt)
 }
 
 android {
     namespace = "kr.kro.fatcats.nfctimer"
-    compileSdk = 34
 
     defaultConfig {
-        applicationId = "kr.kro.fatcats.nfctimer"
-        minSdk = 24
+        applicationId =  "kr.kro.fatcats.nfctimer"
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        versionCode = 10000
+        versionName = "01.00.00"
     }
 
     buildTypes {
@@ -23,13 +19,8 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
-    }
+
+
 }
 
 dependencies {
@@ -39,6 +30,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
