@@ -20,3 +20,8 @@ include(":app")
 // https://stackoverflow.com/questions/77279080/unable-to-make-progress-running-work-android-studio
 gradle.startParameter.excludedTaskNames.addAll(listOf(":build-logic:convention:testClasses"))
 
+include(":core")
+include(":core:common")
+include(":core:analytics")
+include(":core:data")
+include(":core:domain")

@@ -1,6 +1,6 @@
 plugins {
-    alias(libs.plugins.get.application)
-    alias(libs.plugins.get.hilt)
+    alias(libs.plugins.nfc.timer.application)
+    alias(libs.plugins.nfc.timer.hilt)
 }
 
 android {
